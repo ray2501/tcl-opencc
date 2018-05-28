@@ -18,7 +18,7 @@ Apache License 2.0
 Commands
 =====
 
-opencc HANDLE configure  
+opencc HANDLE configFileName  
 HANDLE convert utf8_string  
 HANDLE close
 
