@@ -16,7 +16,7 @@ BuildRequires: make
 BuildRequires: gcc
 BuildRequires: pkg-config
 BuildRequires: tcl-devel >= 8.4
-BuildRequires: opencc-devel >= 1.0.0
+BuildRequires: opencc-devel >= 1.0.1
 Requires:      tcl >= 8.4
 BuildRoot:     %{buildroot}
 
