@@ -47,4 +47,6 @@ rm -rf %buildroot
 %files
 %defattr(-,root,root)
 %{tcl_archdir}
+%doc LICENSE README.md
 
+%changelog
