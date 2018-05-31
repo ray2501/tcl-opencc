@@ -45,7 +45,7 @@ test tcl-opencc-1.4 {convert} {*}{
     -result {12345}
 }
 
-test tcl-opencc-1.4 {close handle} {*}{
+test tcl-opencc-1.5 {close handle} {*}{
     -body {
         cc0 close
     }
