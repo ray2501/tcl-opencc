@@ -1,0 +1,59 @@
+# tcl-opencc.test --
+#
+#	Tests for tcl-opencc
+#------------------------------------------------------------------------------
+
+lappend auto_path .
+if {[lsearch [namespace children] ::tcltest] == -1} {
+    package require tcltest 2
+    namespace import -force ::tcltest::*
+}
+loadTestedCommands
+package require opencc
+
+#-------------------------------------------------------------------------------
+
+test tcl-opencc-1.1 {initialize wrong args} {*}{
+    -body {
+        opencc cc0
+    }
+    -returnCodes error
+    -match glob
+    -result {wrong # args*}
+}
+
+test tcl-opencc-1.2 {initialize wrong args 2} {*}{
+    -body {
+        opencc cc0 "t2s.json" more
+    }
+    -returnCodes error
+    -match glob
+    -result {wrong # args*}
+}
+
+test tcl-opencc-1.3 {create a handle} {*}{
+    -body {
+        catch {opencc cc0 "s2t.json"} result
+    }
+    -result {0}
+}
+
+test tcl-opencc-1.4 {convert} {*}{
+    -body {
+        cc0 convert "12345"
+    }
+    -result {12345}
+}
+
+test tcl-opencc-1.4 {close handle} {*}{
+    -body {
+        cc0 close
+    }
+    -result {0}
+}
+
+#-------------------------------------------------------------------------------
+
+cleanupTests
+return
+
