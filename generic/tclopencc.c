@@ -147,10 +147,11 @@ static int OpenccMain(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv
 
 
   p->handle = opencc_open(zFile);
-  if(p->handle==NULL) {
+  if(p->handle==NULL || p->handle==(opencc_t) -1) {
       Tcl_Free((char *)p);  //open fail, so we need free our memory
       p = NULL;
 
+      Tcl_SetResult(interp, (char *)"open failed", TCL_STATIC);
       return TCL_ERROR;
   }
 

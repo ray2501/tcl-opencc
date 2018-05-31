@@ -31,21 +31,30 @@ test tcl-opencc-1.2 {initialize wrong args 2} {*}{
     -result {wrong # args*}
 }
 
-test tcl-opencc-1.3 {create a handle} {*}{
+test tcl-opencc-1.3 {create a handle, wrong name} {*}{
+    -body {
+        opencc cc0 "nothing.ini"
+    }
+    -returnCodes error
+    -match glob
+    -result {open failed}
+}
+
+test tcl-opencc-1.4 {create a handle} {*}{
     -body {
         catch {opencc cc0 "s2t.json"} result
     }
     -result {0}
 }
 
-test tcl-opencc-1.4 {convert} {*}{
+test tcl-opencc-1.5 {convert} {*}{
     -body {
         cc0 convert "12345"
     }
     -result {12345}
 }
 
-test tcl-opencc-1.5 {close handle} {*}{
+test tcl-opencc-1.6 {close handle} {*}{
     -body {
         cc0 close
     }
