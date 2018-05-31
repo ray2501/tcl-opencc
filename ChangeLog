@@ -1,3 +1,8 @@
+2018-05-31  Danilo Chang
+
+    * Bump version to 0.2
+    * Add -1 check when open
+
 2018-05-28  Danilo Chang
 
     * Dump sample extension and update source code
