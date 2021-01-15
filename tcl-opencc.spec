@@ -7,7 +7,7 @@ Name:          tcl-opencc
 Summary:       Tcl bindings for OpenCC (libopencc)
 Version:       0.2
 Release:       0
-License:       Apache License 2.0
+License:       Apache-2.0
 Group:         Development/Libraries/Tcl
 Source:        %{name}-%{version}.tar.gz
 URL:           https://github.com/ray2501/tcl-opoencc
