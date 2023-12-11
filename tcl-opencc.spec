@@ -5,7 +5,7 @@
 
 Name:          tcl-opencc
 Summary:       Tcl bindings for OpenCC (libopencc)
-Version:       0.2
+Version:       0.3
 Release:       0
 License:       Apache-2.0
 Group:         Development/Libraries/Tcl
