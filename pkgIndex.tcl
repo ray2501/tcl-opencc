@@ -1,5 +1,10 @@
+# -*- tcl -*-
+# Tcl package index file, version 1.1
 #
-# Tcl package index file
-#
-package ifneeded opencc 0.2 \
-    [list load [file join $dir libopencc0.2.so] opencc]
+if {[package vsatisfies [package provide Tcl] 9.0-]} {
+    package ifneeded opencc 0.2 \
+	    [list load [file join $dir libtcl9opencc0.2.so] [string totitle opencc]]
+} else {
+    package ifneeded opencc 0.2 \
+	    [list load [file join $dir libopencc0.2.so] [string totitle opencc]]
+}
