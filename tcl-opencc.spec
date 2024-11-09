@@ -10,7 +10,7 @@ Release:       0
 License:       Apache-2.0
 Group:         Development/Libraries/Tcl
 Source:        %{name}-%{version}.tar.gz
-URL:           https://github.com/ray2501/tcl-opoencc
+URL:           https://github.com/ray2501/tcl-opencc
 BuildRequires: autoconf
 BuildRequires: make
 BuildRequires: gcc
