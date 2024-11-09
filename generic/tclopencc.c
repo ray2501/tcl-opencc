@@ -64,7 +64,7 @@ static int OpenccObjCmd(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*ob
 
     case OpenccCONVERT: {
       char *inputstring = NULL;
-      int len = 0;
+      Tcl_Size len = 0;
       char *outputstring = NULL;
       Tcl_Obj *return_obj = NULL;
 
@@ -121,7 +121,7 @@ static int OpenccMain(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv
   OpenccData *p;
   const char *zArg = NULL;  
   const char *zFile = NULL;
-  int len;
+  Tcl_Size len;
 
   if( objc != 3 ){
     Tcl_WrongNumArgs(interp, 1, objv,
